@@ -1,0 +1,333 @@
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 50px;
+    background: linear-gradient(135deg, #ffe0f0, #f0e0ff, #e0eeff);
+}
+
+/* Header Box */
+.div1 {
+    background: linear-gradient(to right, #ff6b6b, #cb46fb);
+    color: white;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px 40px;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px #00000042;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Fixed: was .div1 h2 but HTML uses h1 */
+.div1 h1 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+/* Form Styles */
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+input {
+    height: 40px;
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    /* Fixed: prevents overflow issues */
+}
+
+.div2 {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    width: 80%;
+    max-width: 800px;
+    padding: 30px 40px;
+    border-radius: 25px;
+    box-shadow: 0 8px 32px #00000042;
+}
+#details {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.full-width {
+    flex: 1;
+}
+
+/* Save Button */
+#saveBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#saveBtn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#saveBtn:active {
+    background-color: #3e9142;
+    transform: scale(0.98);
+}
+
+/* Food Items */
+.food-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.food-option {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.food-option label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.food-option input[type="number"] {
+    padding: 5px;
+    font-size: 16px;
+}
+
+/* Decorations — Fixed: removed duplicate rules, kept the best version */
+.addon-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.addon-option {
+    min-width: 150px;
+    padding: 10px 15px;
+    margin: 10px;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 500;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.addon-option.selected {
+    background: linear-gradient(to right, #ff6b6b, #cb46fb);
+    border-color: #cb46fb;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(203, 70, 251, 0.6);
+}
+
+/* Save CSV Button (for when you add it later) */
+#saveBtn {
+    background: linear-gradient(to right, #ff6b6b, #cb46fb);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(203, 70, 251, 0.5);
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+}
+
+#saveBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(203, 70, 251, 0.7);
+}
+
+/* Load Button */
+#loadBtn {
+    background: linear-gradient(to right, #ff6b6b, #cb46fb);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(203, 70, 251, 0.5);
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+}
+
+#loadBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(203, 70, 251, 0.7);
+}
+
+#loadBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#loadBtn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#loadBtn:active {
+    background-color: #3e9142;
+    transform: scale(0.98);
+}
+
+#editBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 998;
+    background: linear-gradient(to right, #ff6b6b, #cb46fb);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(203, 70, 251, 0.4);
+    transition: transform 0.2s;
+}
+
+#editBtn:hover {
+    transform: scale(1.05);
+}
+
+.modal-label {
+    display: block;
+    color: #ccc;
+    font-size: 13px;
+    margin-bottom: 5px;
+    margin-top: 12px;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.modal-error {
+    color: #ff6b6b;
+    font-size: 13px;
+    min-height: 18px;
+    margin: 8px 0;
+}
+
+.modal-btn-primary {
+    width: 100%;
+    padding: 11px;
+    margin-top: 10px;
+    background: linear-gradient(to right, #ff6b6b, #cb46fb);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.modal-btn-secondary {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.modal-btn-forgot {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    background: transparent;
+    border: none;
+    color: #cb46fb;
+    cursor: pointer;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+#detailsBtn {
+    background: linear-gradient(to right, #ff6b6b, #cb46fb);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(203, 70, 251, 0.4);
+    transition: transform 0.2s;
+}
+
+#detailsBtn:hover {
+    transform: scale(1.05);
+}

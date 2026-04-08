@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Essentials -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Client Information Form — Sarwari</title>
+    <meta name="description" content="Fill out our client information form to book your dream event at Sarwari.">
+    <meta name="author" content="Your Ballroom Name">
+
+    <!-- Search Engine -->
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://yourballroom.com/booking">
+
+    <!-- Open Graph (WhatsApp, Facebook previews) -->
+    <meta property="og:title" content="Book Your Event — Sarwari">
+    <meta property="og:description" content="Reserve your date and share your event details with us.">
+    <meta property="og:image" content="https://yourballroom.com/og-image.png">
+    <meta property="og:url" content="https://yourballroom.com/booking">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Book Your Event — Sarwari">
+    <meta name="twitter:description" content="Reserve your date and share your event details with us.">
+    <meta name="twitter:image" content="https://yourballroom.com/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!--Connecting Links-->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <!-- Theme color (browser bar on mobile) -->
+    <meta name="theme-color" content="#bd317e">
+
+</head>
+
+<body>
+
+    <button id="editBtn">✎ Edit</button>
+
+    <!--Header Part-->
+    <div class="div1">
+        <header>
+            <h1>Sarwari Client Information Form</h1>
+            <p>Kindly fill the form below</p>
+        </header>
+    </div>
+
+    <!--Fieldset 1 — Event Information-->
+    <div class="div2">
+        <h2>Event Information</h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Date of Booking</label>
+                    <input type="date" id="d-booking">
+                </div>
+                <div class="form-group">
+                    <label>Date of Program</label>
+                    <input type="date" id="d-program">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Party Name</label>
+                    <input type="text" id="party" placeholder="Birthday">
+                </div>
+                <div class="form-group">
+                    <label>Number of Guests</label>
+                    <input type="number" id="guests" placeholder="100">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+123456789">
+                </div>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name.">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="full-group full-width">
+                    <label>Event Details</label>
+                    <textarea id="details"
+                        placeholder="To help us tailor our services to your needs, please provide a brief description of your planned program or activities."></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <br><br>
+
+    <!--Fieldset 2 — Booking Details-->
+    <div class="div2">
+        <h2>Booking Details</h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Booking Reference Number</label>
+                    <input type="number" id="reference-num" placeholder="Reference Number">
+                </div>
+                <div class="form-group">
+                    <label>Booking Amount</label>
+                    <input type="number" id="booking-amnt" placeholder="Total Booking Amount">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Advance 1</label>
+                    <input type="number" id="advance1" placeholder="Advance 1">
+                </div>
+                <div class="form-group">
+                    <label>Advance 2</label>
+                    <input type="number" id="advance2" placeholder="Advance 2">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Advance 3</label>
+                    <input type="number" id="advance3" placeholder="Advance 3">
+                </div>
+                <div class="form-group">
+                    <label>Extra Payment</label>
+                    <input type="number" id="extra" readonly placeholder="0">
+                </div>
+            </div>
+
+            <hr>
+            <br>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Total Paid</label>
+                    <input type="number" id="total-paid" placeholder="0" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Balance</label>
+                    <input type="number" id="balance" placeholder="0" readonly>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <br><br>
+
+    <!--Fieldset 3 — Other Requirements-->
+    <div class="div2">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h2 style="margin:0;">Other Requirements</h2>
+            <button id="detailsBtn">✎ Details</button>
+        </div>
+        <form>
+            <h3>✦ Food Items</h3>
+            <div class="food-row">
+                <div class="food-option">
+                    <label>BBQ</label>
+                    <input type="number" id="bbq" placeholder="0">
+                </div>
+                <div class="food-option">
+                    <label>Cold Drink</label>
+                    <input type="number" id="drink" placeholder="Amount for Cold Drinks.">
+                </div>
+            </div>
+
+            <hr>
+            <br>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Total Paid (Food)</label>
+                    <input type="number" id="paid-food" placeholder="0">
+                </div>
+                <div class="form-group">
+                    <label>Balance (Food)</label>
+                    <input type="number" id="balance-food" placeholder="0" readonly>
+                </div>
+            </div>
+
+            <hr>
+            <br>
+
+            <h3>✦ Decorations</h3>
+            <div class="addon-options">
+                <div class="addon-option" onclick="toggleAddon(this)" data-name="Partition Ladies">Partition Ladies
+                </div>
+                <div class="addon-option" onclick="toggleAddon(this)" data-name="Birthday Setup">Birthday Setup</div>
+            </div>
+
+            <div class="form-row" style="margin-top: 20px;">
+                <div class="form-group">
+                    <label>Other Requirements</label>
+                    <input type="text" id="other" placeholder="Other favours you wish for.">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <br><br>
+
+    <button id="saveBtn">Save</button>
+    <button onclick="loadForm()" id="loadBtn">Load Saved Form</button>
+
+    <br><br>
+
+    <div id="authModal"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:999; justify-content:center; align-items:center;">
+        <div id="modalBody"
+            style="background:#1a1a2e; border:1px solid rgba(255,255,255,0.15); border-radius:16px; padding:40px; width:340px; box-shadow:0 8px 32px rgba(0,0,0,0.8);">
+        </div>
+    </div>
+
+</body>
+</html>
