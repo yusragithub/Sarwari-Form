@@ -474,3 +474,9 @@ input {
 .tip strong {
     color: #cb46fb;
 }
+
+/* Favicon */
+.favicon {
+    width: 100px;
+    height: 100px
+}
