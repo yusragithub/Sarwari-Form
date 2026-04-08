@@ -334,15 +334,18 @@ input {
 
 #howToBtn {
     background: transparent;
-    border: 2px solid #cb46fb;
-    color: #cb46fb;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: bold;
+    border: none;
+    color: #aaa;
+    font-size: 15px;
     cursor: pointer;
-    margin: 10px auto;
+    margin: 5px auto;
     display: block;
-    transition: all 0.3s ease;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+#howToBtn:hover {
+    color: #4A90E2;
 }
 
 #howToBtn:hover {
