@@ -479,3 +479,22 @@ function loadForm() {
 
 document.getElementById('saveBtn').addEventListener('click', saveForm);
 document.getElementById('loadBtn').addEventListener('click', loadForm);
+
+// ───────────────────────────────────────────
+// HOW TO SAVE PANEL
+// ───────────────────────────────────────────
+
+document.getElementById('howToBtn').addEventListener('click', function () {
+    document.getElementById('howToPanel').classList.add('open');
+});
+
+document.getElementById('closePanelBtn').addEventListener('click', function () {
+    document.getElementById('howToPanel').classList.remove('open');
+});
+
+// Close when clicking outside the panel
+document.getElementById('howToPanel').addEventListener('click', function (e) {
+    if (e.target === this) {
+        this.classList.remove('open');
+    }
+});

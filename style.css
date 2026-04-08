@@ -331,3 +331,143 @@ input {
 #detailsBtn:hover {
     transform: scale(1.05);
 }
+
+#howToBtn {
+    background: transparent;
+    border: 2px solid #cb46fb;
+    color: #cb46fb;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px auto;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+#howToBtn:hover {
+    background: #cb46fb;
+    color: white;
+}
+
+/* Overlay background */
+#howToPanel {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 997;
+    justify-content: center;
+    align-items: center;
+}
+
+#howToPanel.open {
+    display: flex;
+}
+
+/* The actual panel */
+#howToContent {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    padding: 40px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+#closePanelBtn {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+#closePanelBtn:hover {
+    background: rgba(255, 107, 107, 0.6);
+}
+
+#howToContent h2 {
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.step-num {
+    background: linear-gradient(to right, #ff6b6b, #cb46fb);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.step-text strong {
+    color: white;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.step-text p {
+    color: #ccc;
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.step-text em {
+    color: #cb46fb;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.tip {
+    background: rgba(203, 70, 251, 0.1);
+    border: 1px solid rgba(203, 70, 251, 0.3);
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: #ddd;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.tip strong {
+    color: #cb46fb;
+}

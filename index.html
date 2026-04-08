@@ -38,6 +38,9 @@
     <!-- Theme color (browser bar on mobile) -->
     <meta name="theme-color" content="#bd317e">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
 </head>
 
 <body>
@@ -214,6 +217,62 @@
     <button onclick="loadForm()" id="loadBtn">Load Saved Form</button>
 
     <br><br>
+
+    <button id="howToBtn">❓ How to Save?</button>
+    
+    <!-- How to Save Panel -->
+    <div id="howToPanel">
+        <div id="howToContent">
+            <button id="closePanelBtn">✕</button>
+            <h2>📁 How to Save Forms in a Folder</h2>
+    
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-text">
+                    <strong>Open Chrome Settings</strong>
+                    <p>Click the three dots (⋮) in the top right corner of Chrome, then click <em>Settings</em>.</p>
+                </div>
+            </div>
+    
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-text">
+                    <strong>Go to Downloads</strong>
+                    <p>On the left sidebar, click <em>Downloads</em>.</p>
+                </div>
+            </div>
+    
+            <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-text">
+                    <strong>Turn on "Ask where to save"</strong>
+                    <p>Toggle ON the option that says <em>"Ask where to save each file before downloading"</em>.</p>
+                </div>
+            </div>
+    
+            <div class="step">
+                <div class="step-num">4</div>
+                <div class="step-text">
+                    <strong>Create your folder (once only!)</strong>
+                    <p>On your Desktop, right click → New Folder → name it <em>"Sarwari Client Information Forms"</em>.</p>
+                </div>
+            </div>
+    
+            <div class="step">
+                <div class="step-num">5</div>
+                <div class="step-text">
+                    <strong>Save the form</strong>
+                    <p>Click the 💾 Save button → browser will ask where to save → select your <em>"Sarwari Client
+                            Information Forms"</em> folder → Done! ✓</p>
+                </div>
+            </div>
+    
+            <div class="tip">
+                💡 <strong>Tip:</strong> The file will be automatically named after the client and their event date — e.g.
+                <em>Ahmed_2025-08-15.json</em>
+            </div>
+        </div>
+    </div>
 
     <div id="authModal"
         style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:999; justify-content:center; align-items:center;">
